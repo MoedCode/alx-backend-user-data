@@ -1,0 +1,130 @@
+2024-05-16 02:04:33,816 INFO: User accessed the index page
+2024-05-16 02:04:33,816 INFO: User accessed the index page
+2024-05-16 02:04:33,816 INFO: 127.0.0.1 - - [16/May/2024 02:04:33] "GET / HTTP/1.1" 200 -
+2024-05-16 02:04:33,816 INFO: 127.0.0.1 - - [16/May/2024 02:04:33] "GET / HTTP/1.1" 200 -
+2024-05-16 02:35:26,540 INFO: User accessed the index page
+2024-05-16 02:35:26,540 INFO: User accessed the index page
+2024-05-16 02:35:26,541 INFO: 127.0.0.1 - - [16/May/2024 02:35:26] "GET / HTTP/1.1" 200 -
+2024-05-16 02:35:26,541 INFO: 127.0.0.1 - - [16/May/2024 02:35:26] "GET / HTTP/1.1" 200 -
+2024-05-16 02:35:55,940 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.8:5000
+2024-05-16 02:35:55,940 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.8:5000
+2024-05-16 02:35:55,941 INFO: [33mPress CTRL+C to quit[0m
+2024-05-16 02:35:55,941 INFO: [33mPress CTRL+C to quit[0m
+2024-05-16 02:35:55,950 INFO:  * Restarting with stat
+2024-05-16 02:35:55,950 INFO:  * Restarting with stat
+2024-05-16 02:35:56,399 WARNING:  * Debugger is active!
+2024-05-16 02:35:56,399 WARNING:  * Debugger is active!
+2024-05-16 02:35:56,402 INFO:  * Debugger PIN: 866-573-455
+2024-05-16 02:35:56,402 INFO:  * Debugger PIN: 866-573-455
+2024-05-16 02:36:25,854 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.8:5000
+2024-05-16 02:36:25,854 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.8:5000
+2024-05-16 02:36:25,854 INFO: [33mPress CTRL+C to quit[0m
+2024-05-16 02:36:25,854 INFO: [33mPress CTRL+C to quit[0m
+2024-05-16 02:36:25,856 INFO:  * Restarting with stat
+2024-05-16 02:36:25,856 INFO:  * Restarting with stat
+2024-05-16 02:36:26,325 WARNING:  * Debugger is active!
+2024-05-16 02:36:26,325 WARNING:  * Debugger is active!
+2024-05-16 02:36:26,326 INFO:  * Debugger PIN: 866-573-455
+2024-05-16 02:36:26,326 INFO:  * Debugger PIN: 866-573-455
+2024-05-16 02:37:04,930 INFO: User accessed the index page
+2024-05-16 02:37:04,930 INFO: User accessed the index page
+2024-05-16 02:37:04,933 INFO: 127.0.0.1 - - [16/May/2024 02:37:04] "GET / HTTP/1.1" 200 -
+2024-05-16 02:37:04,933 INFO: 127.0.0.1 - - [16/May/2024 02:37:04] "GET / HTTP/1.1" 200 -
+2024-05-16 02:37:08,532 INFO: User accessed the index page
+2024-05-16 02:37:08,532 INFO: User accessed the index page
+2024-05-16 02:37:08,532 INFO: 127.0.0.1 - - [16/May/2024 02:37:08] "GET / HTTP/1.1" 200 -
+2024-05-16 02:37:08,532 INFO: 127.0.0.1 - - [16/May/2024 02:37:08] "GET / HTTP/1.1" 200 -
+2024-05-16 02:44:38,989 INFO:  * Detected change in '/mnt/c/Users/Active/Desktop/Coding/Short_Specializations/alx-backend-user-data/0x00-personal_data/1-temp.py', reloading
+2024-05-16 02:44:38,989 INFO:  * Detected change in '/mnt/c/Users/Active/Desktop/Coding/Short_Specializations/alx-backend-user-data/0x00-personal_data/1-temp.py', reloading
+2024-05-16 02:44:39,060 INFO:  * Restarting with stat
+2024-05-16 02:44:39,060 INFO:  * Restarting with stat
+2024-05-16 02:44:39,660 WARNING:  * Debugger is active!
+2024-05-16 02:44:39,660 WARNING:  * Debugger is active!
+2024-05-16 02:44:39,662 INFO:  * Debugger PIN: 866-573-455
+2024-05-16 02:44:39,662 INFO:  * Debugger PIN: 866-573-455
+2024-05-16 02:53:04,463 INFO:  * Detected change in '/mnt/c/Users/Active/Desktop/Coding/Short_Specializations/alx-backend-user-data/0x00-personal_data/1-temp.py', reloading
+2024-05-16 02:53:04,463 INFO:  * Detected change in '/mnt/c/Users/Active/Desktop/Coding/Short_Specializations/alx-backend-user-data/0x00-personal_data/1-temp.py', reloading
+2024-05-16 02:53:04,508 INFO:  * Restarting with stat
+2024-05-16 02:53:04,508 INFO:  * Restarting with stat
+2024-05-16 02:53:04,890 WARNING:  * Debugger is active!
+2024-05-16 02:53:04,890 WARNING:  * Debugger is active!
+2024-05-16 02:53:04,890 INFO:  * Debugger PIN: 866-573-455
+2024-05-16 02:53:04,890 INFO:  * Debugger PIN: 866-573-455
+2024-05-16 02:57:51,898 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.8:5000
+2024-05-16 02:57:51,898 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.8:5000
+2024-05-16 02:57:51,899 INFO: [33mPress CTRL+C to quit[0m
+2024-05-16 02:57:51,899 INFO: [33mPress CTRL+C to quit[0m
+2024-05-16 02:57:51,900 INFO:  * Restarting with stat
+2024-05-16 02:57:51,900 INFO:  * Restarting with stat
+2024-05-16 02:57:52,350 WARNING:  * Debugger is active!
+2024-05-16 02:57:52,350 WARNING:  * Debugger is active!
+2024-05-16 02:57:52,351 INFO:  * Debugger PIN: 866-573-455
+2024-05-16 02:57:52,351 INFO:  * Debugger PIN: 866-573-455
+2024-05-16 02:58:34,963 INFO:  * Detected change in '/mnt/c/Users/Active/Desktop/Coding/Short_Specializations/alx-backend-user-data/0x00-personal_data/1-temp.py', reloading
+2024-05-16 02:58:34,963 INFO:  * Detected change in '/mnt/c/Users/Active/Desktop/Coding/Short_Specializations/alx-backend-user-data/0x00-personal_data/1-temp.py', reloading
+2024-05-16 02:58:35,029 INFO:  * Restarting with stat
+2024-05-16 02:58:35,029 INFO:  * Restarting with stat
+2024-05-16 02:58:35,621 WARNING:  * Debugger is active!
+2024-05-16 02:58:35,621 WARNING:  * Debugger is active!
+2024-05-16 02:58:35,623 INFO:  * Debugger PIN: 866-573-455
+2024-05-16 02:58:35,623 INFO:  * Debugger PIN: 866-573-455
+2024-05-16 02:58:43,608 INFO:  * Detected change in '/mnt/c/Users/Active/Desktop/Coding/Short_Specializations/alx-backend-user-data/0x00-personal_data/1-temp.py', reloading
+2024-05-16 02:58:43,608 INFO:  * Detected change in '/mnt/c/Users/Active/Desktop/Coding/Short_Specializations/alx-backend-user-data/0x00-personal_data/1-temp.py', reloading
+2024-05-16 02:58:43,697 INFO:  * Restarting with stat
+2024-05-16 02:58:43,697 INFO:  * Restarting with stat
+2024-05-16 02:58:45,235 WARNING:  * Debugger is active!
+2024-05-16 02:58:45,235 WARNING:  * Debugger is active!
+2024-05-16 02:58:45,238 INFO:  * Debugger PIN: 866-573-455
+2024-05-16 02:58:45,238 INFO:  * Debugger PIN: 866-573-455
+2024-05-16 02:58:57,116 INFO: User accessed the index page
+2024-05-16 02:58:57,116 INFO: User accessed the index page
+2024-05-16 02:58:57,117 INFO: 127.0.0.1 - - [16/May/2024 02:58:57] "GET / HTTP/1.1" 200 -
+2024-05-16 02:58:57,117 INFO: 127.0.0.1 - - [16/May/2024 02:58:57] "GET / HTTP/1.1" 200 -
+2024-05-16 03:46:28,327 INFO:  * Detected change in '/mnt/c/Users/Active/Desktop/Coding/Short_Specializations/alx-backend-user-data/0x00-personal_data/0-temp.py', reloading
+2024-05-16 03:46:28,327 INFO:  * Detected change in '/mnt/c/Users/Active/Desktop/Coding/Short_Specializations/alx-backend-user-data/0x00-personal_data/0-temp.py', reloading
+2024-05-16 03:46:29,750 INFO:  * Restarting with stat
+2024-05-16 03:46:29,750 INFO:  * Restarting with stat
+2024-05-16 03:46:55,867 WARNING:  * Debugger is active!
+2024-05-16 03:46:55,867 WARNING:  * Debugger is active!
+2024-05-16 03:46:55,913 INFO:  * Debugger PIN: 866-573-455
+2024-05-16 03:46:55,913 INFO:  * Debugger PIN: 866-573-455
+2024-05-16 03:48:24,452 INFO:  * Detected change in '/mnt/c/Users/Active/Desktop/Coding/Short_Specializations/alx-backend-user-data/0x00-personal_data/0-temp.py', reloading
+2024-05-16 03:48:24,452 INFO:  * Detected change in '/mnt/c/Users/Active/Desktop/Coding/Short_Specializations/alx-backend-user-data/0x00-personal_data/0-temp.py', reloading
+2024-05-16 03:48:26,083 WARNING:  * Debugger is active!
+2024-05-16 03:48:26,083 WARNING:  * Debugger is active!
+2024-05-16 03:48:26,085 INFO:  * Debugger PIN: 866-573-455
+2024-05-16 03:48:26,085 INFO:  * Debugger PIN: 866-573-455
+2024-05-16 03:48:37,930 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.8:5000
+2024-05-16 03:48:37,930 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.8:5000
+2024-05-16 03:48:37,930 INFO: [33mPress CTRL+C to quit[0m
+2024-05-16 03:48:37,930 INFO: [33mPress CTRL+C to quit[0m
+2024-05-16 03:48:37,932 INFO:  * Restarting with stat
+2024-05-16 03:48:37,932 INFO:  * Restarting with stat
+2024-05-16 03:48:38,318 WARNING:  * Debugger is active!
+2024-05-16 03:48:38,318 WARNING:  * Debugger is active!
+2024-05-16 03:48:38,319 INFO:  * Debugger PIN: 866-573-455
+2024-05-16 03:48:38,319 INFO:  * Debugger PIN: 866-573-455
