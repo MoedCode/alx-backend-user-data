@@ -1,20 +1,38 @@
 #!/usr/bin/env python3
-import re
+"""
+Defines a hash_password function to return a hashed password
+"""
+import bcrypt
+from bcrypt import hashpw
 
 
-def filter_datum(fields, redaction, message, separator):
-    """ called filter_datum that returns the log message obfuscated: """
-    pattern = "|".join(map(re.escape, fields))
-    # print(f"Pattern : {pattern}")
-    regex = re.compile(rf'(?:^|{re.escape(separator)})(?:{pattern})=[^;]*')
+def hash_password(password: str) -> bytes:
+    """
+    Returns a encoded hashed password instance from  <class 'bytes'>
+    Args:
+        password (str): password to be hashed
+    """
+    b = password.encode()
+    hashed = hashpw(b, bcrypt.gensalt())
+    return hashed
 
-    return regex.sub(f'{redaction}', message)
 
+def is_valid(hashed_password: bytes, password: str) -> bool:
+    """
+    Check  the password  validation
+    Args:
+        hashed_password (bytes):
+        encoded hashed password instance from  <class 'bytes'>
+        password (str): password in string
+    Return:
+        bool
+    """
+    return bcrypt.checkpw(password.encode(), hashed_password)
 
-# Test the function
-fields = ["password", "date_of_birth"]
-messages = ["name=egg;email=eggmin@eggsample.com;password=eggcellent;date_of_birth=12/12/1986;",
-            "name=bob;email=bob@dylan.com;password=bobbycool;date_of_birth=03/04/1993;"]
-
-for message in messages:
-    print(filter_datum(fields, 'xxx', message, ';'))
+if __name__ == "__main__":
+    PWD  = "myPass"
+    hasPWD = hash_password(PWD)
+    print(f"hashed password : {hasPWD}")
+    print(f"hashed password : {type(hasPWD)}")
+    print(f"is password valid : {is_valid(hasPWD, PWD)} ")
+    # print(f"is password valid {is_valid(hasPWD, PWD)} ")
