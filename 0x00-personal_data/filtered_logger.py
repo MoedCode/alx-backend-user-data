@@ -4,13 +4,10 @@ import re
 
 def filter_datum(fields, redaction, message, separator):
     """ called filter_datum that returns the log message obfuscated: """
-    pattern = "|".join(map(re.escape, fields))
-    # print(f"Pattern : {pattern}")
-    regex = re.compile(rf'(?:^|{re.escape(separator)})(?:{pattern})=[^;]*')
-
-    return regex.sub(f'{redaction}', message)
-
-
+    for field in fields:
+        message = re.sub(field+'=.*?'+separator,
+                         field+'='+redaction+separator, message)
+    return message
 if __name__ == "__main__":
     fields = ["password", "date_of_birth"]
     messages = [
