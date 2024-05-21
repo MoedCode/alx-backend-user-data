@@ -1,0 +1,98 @@
+2024-05-18 02:16:09,940:INFO:None
+Help on class Developer in module __main__:
+
+class Developer(Employee)
+ |  Developer(first, last, pay)
+ |
+ |  Method resolution order:
+ |      Developer
+ |      Employee
+ |      builtins.object
+ |
+ |  Methods inherited from Employee:
+ |
+ |  __init__(self, first, last, pay)
+ |      Initialize self.  See help(type(self)) for accurate signature.
+ |
+ |  apply_raise(self)
+ |
+ |  fullname(self)
+ |
+ |  ----------------------------------------------------------------------
+ |  Data descriptors inherited from Employee:
+ |
+ |  __dict__
+ |      dictionary for instance variables (if defined)
+ |
+ |  __weakref__
+ |      list of weak references to the object (if defined)
+ |
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes inherited from Employee:
+ |
+ |  raise_amt = 1.04
+
+
+
+ arg => None
+{'first': 'Ziko', 'last': 'Front', 'pay': 50000}
+ {'first': 'boda', 'last': 'Back', 'pay': 60000}
+2024-05-18 12:40:18,314:INFO:{'first': 'Ziko', 'last': 'salkan', 'pay': 50000}
+2024-05-18 12:40:18,315:INFO:{'first': 'Ziko', 'last': 'Front', 'pay': 50000, 'prog_lang': 'JavaScript/next, css/botstrap'}
+2024-05-18 12:40:18,315:INFO:{'first': 'boda', 'last': 'Back', 'pay': 60000, 'prog_lang': 'python/flask&django, mySQL, '}
+2024-05-18 12:42:10,296:INFO:____
+2024-05-18 12:42:10,297:INFO:{'first': 'Ziko', 'last': 'salkan', 'pay': 50000}
+2024-05-18 12:42:10,297:INFO:{'first': 'Ziko', 'last': 'Front', 'pay': 50000, 'prog_lang': 'JavaScript/next, css/botstrap'}
+2024-05-18 12:42:10,297:INFO:{'first': 'boda', 'last': 'Back', 'pay': 60000, 'prog_lang': 'python/flask&django, mySQL, '}
+2024-05-18 12:44:47,982:INFO:____
+2024-05-18 12:44:47,983:INFO:{'first': 'Ziko', 'last': 'salkan', 'pay': 50000}
+2024-05-18 12:44:47,984:INFO:{'first': 'Ziko', 'last': 'Front', 'pay': 50000, 'prog_lang': 'JavaScript/next, css/botstrap'}
+2024-05-18 12:44:47,985:INFO:{'first': 'boda', 'last': 'Back', 'pay': 60000, 'prog_lang': 'python/flask&django, mySQL, '}
+2024-05-18 12:45:28,537:INFO:____
+2024-05-18 12:45:28,538:INFO:[{'first': 'Ziko', 'last': 'salkan', 'pay': 50000}, {'first': 'Ziko', 'last': 'Front', 'pay': 50000, 'prog_lang': 'JavaScript/next, css/botstrap'}, {'first': 'boda', 'last': 'Back', 'pay': 60000, 'prog_lang': 'python/flask&django, mySQL, '}]
+[
+    arg[0], arg[1], arg[2]
+]
+[
+    [arg[0], arg[1], arg[2][0]
+]
+
+2024-05-18 14:30:27,877:INFO:____
+2024-05-18 14:30:27,881:INFO:[{'first': 'Ziko', 'last': 'salkan', 'pay': 50000}, {'first': 'Ziko', 'last': 'Front', 'pay': 50000, 'prog_lang': 'JavaScript/next, css/botstrap'}, {'first': 'boda', 'last': 'Back', 'pay': 60000, 'prog_lang': 'python/flask&django, mySQL, '}]
+2024-05-18 14:39:38,139:INFO:____
+2024-05-18 14:39:38,143:INFO:None
+2024-05-18 14:39:38,144:INFO:dev_log.log
+2024-05-18 14:40:13,286:INFO:____
+2024-05-18 14:40:13,287:INFO:None
+2024-05-18 14:40:13,287:INFO:dev_log.log
+2024-05-18 14:41:50,813:INFO:____
+2024-05-18 14:41:50,813:INFO:None
+2024-05-18 14:41:50,813:INFO:dev_log.log
+2024-05-18 14:41:50,813:INFO:____
+2024-05-18 14:41:50,813:INFO:{'first': 'Ziko', 'last': 'salkan', 'pay': 50000}
+2024-05-18 14:41:50,813:INFO:{'first': 'Ziko', 'last': 'Front', 'pay': 50000, 'prog_lang': 'JavaScript/next, css/botstrap'}
+2024-05-18 14:41:50,813:INFO:{'first': 'boda', 'last': 'Back', 'pay': 60000, 'prog_lang': 'python/flask&django, mySQL, '}
+2024-05-18 15:09:48,543:INFO:____
+2024-05-18 15:09:48,547:INFO:{'first': 'Ziko', 'last': 'salkan', 'pay': 50000}
+2024-05-18 15:09:48,548:INFO:{'first': 'Ziko', 'last': 'Front', 'pay': 50000, 'prog_lang': 'JavaScript/next, css/botstrap'}
+2024-05-18 15:09:48,553:INFO:{'first': 'boda', 'last': 'Back', 'pay': 60000, 'prog_lang': 'python/flask&django, mySQL, '}
+2024-05-18 15:10:14,403:INFO:____
+2024-05-18 15:10:14,405:INFO:{'first': 'Ziko', 'last': 'salkan', 'pay': 50000}
+2024-05-18 15:10:14,407:INFO:{'first': 'Ziko', 'last': 'Front', 'pay': 50000, 'prog_lang': 'JavaScript/next, css/botstrap'}
+2024-05-18 15:10:14,408:INFO:{'first': 'boda', 'last': 'Back', 'pay': 60000, 'prog_lang': 'python/flask&django, mySQL, '}
+2024-05-19 00:52:40,498:INFO:____
+2024-05-19 00:52:40,500:INFO:{'first': 'Ziko', 'last': 'salkan', 'pay': 50000}
+2024-05-19 00:52:40,501:INFO:{'first': 'Ziko', 'last': 'Front', 'pay': 50000, 'prog_lang': 'JavaScript/next, css/botstrap'}
+2024-05-19 00:52:40,501:INFO:{'first': 'boda', 'last': 'Back', 'pay': 60000, 'prog_lang': 'python/flask&django, mySQL, '}
+2024-05-19 00:54:22,018:INFO:____
+2024-05-19 00:54:22,020:INFO:{'first': 'Ziko', 'last': 'salkan', 'pay': 50000}
+2024-05-19 00:54:22,020:INFO:{'prog_lang': 'JavaScript/next, css/botstrap'}
+2024-05-19 00:54:22,021:INFO:{'prog_lang': 'python/flask&django, mySQL, '}
+2024-05-19 00:55:28,363:INFO:____
+2024-05-19 00:55:28,364:INFO:{'first': 'Ziko', 'last': 'salkan', 'pay': 50000}
+2024-05-19 00:55:28,364:INFO:{'first': 'Ziko', 'last': 'Front', 'pay': 50000, 'prog_lang': 'JavaScript/next, css/botstrap'}
+2024-05-19 00:55:28,365:INFO:{'first': 'boda', 'last': 'Back', 'pay': 60000, 'prog_lang': 'python/flask&django, mySQL, '}
+2024-05-19 00:56:06,645:INFO:____
+2024-05-19 00:56:06,652:INFO:{'first': 'Ziko', 'last': 'salkan', 'pay': 50000}
+2024-05-19 00:56:06,657:INFO:{'first': 'Ziko', 'last': 'Front', 'pay': 50000, 'prog_lang': 'JavaScript/next, css/botstrap'}
+2024-05-19 00:56:06,672:INFO:{'first': 'boda', 'last': 'Back', 'pay': 60000, 'prog_lang': 'python/flask&django, mySQL, '}

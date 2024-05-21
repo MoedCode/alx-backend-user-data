@@ -1,0 +1,51 @@
+Help on class Developer in module __main__:
+
+class Developer(Employee)
+ |  Developer(first, last, pay, prog_lang)
+ |  
+ |  Method resolution order:
+ |      Developer
+ |      Employee
+ |      builtins.object
+ |  
+ |  Methods defined here:
+ |  
+ |  __init__(self, first, last, pay, prog_lang)
+ |      Initialize self.  See help(type(self)) for accurate signature.
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |  
+ |  raise_amt = 1.1
+ |  
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from Employee:
+ |  
+ |  apply_raise(self)
+ |  
+ |  fullname(self)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors inherited from Employee:
+ |  
+ |  __dict__
+ |      dictionary for instance variables (if defined)
+ |  
+ |  __weakref__
+ |      list of weak references to the object (if defined)
+
+
+
+ arg => None
+
+
+ arg => dev_log.log
+
+
+ arg => {'first': 'Ziko', 'last': 'salkan', 'pay': 50000}
+
+
+ arg => {'first': 'Ziko', 'last': 'Front', 'pay': 50000, 'prog_lang': 'JavaScript/next, css/botstrap'}
+
+
+ arg => {'first': 'boda', 'last': 'Back', 'pay': 60000, 'prog_lang': 'python/flask&django, mySQL, '}
