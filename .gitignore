@@ -1,1 +1,28 @@
 .git/
+__pycache__/
+.vscode/
+
+# Virtual environment
+venv/
+env/
+.myenv/
+Flask-Auth/bin/
+Flask-Auth/include/
+Flask-Auth/lib/
+Flask-Auth/lib64/
+Flask-Auth/share/
+
+# Python egg files
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Log files
+*.log
+
+# Environment variables
+.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
