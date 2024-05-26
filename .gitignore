@@ -1,7 +1,7 @@
 .git/
 __pycache__/
 .vscode/
-
+NP_*/
 # Virtual environment
 venv/
 env/

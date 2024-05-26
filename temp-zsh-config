@@ -1,0 +1,13 @@
+
+# Function to set virtual environment prompt
+function set_virtualenv_prompt {
+    if [[ -n "$VIRTUAL_ENV" ]]; then
+        VENV=$(basename "$VIRTUAL_ENV")
+        PROMPT="($VENV) $PROMPT"
+        echo "Virtual environment is activated: $VENV"
+    fi
+}
+
+# Source virtual environment activation script and update prompt
+source /mnt/c/Users/Active/Desktop/Coding/Short_Specializations/alx-backend-user-data/Flask-Auth/bin/activate
+set_virtualenv_prompt
