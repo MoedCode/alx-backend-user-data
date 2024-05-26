@@ -6,11 +6,11 @@ NP_*/
 venv/
 env/
 .myenv/
-Flask-Auth/bin/
-Flask-Auth/include/
-Flask-Auth/lib/
-Flask-Auth/lib64/
-Flask-Auth/share/
+VI/Flask-Auth/bin/
+VI/Flask-Auth/include/
+VI/Flask-Auth/lib/
+VI/Flask-Auth/lib64/
+VI/Flask-Auth/share/
 
 # Python egg files
 *.egg
