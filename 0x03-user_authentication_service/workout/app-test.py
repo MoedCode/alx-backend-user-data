@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 import requests
 
-# Data to send in the POST request
-data = {'key': 'value'}
+# Example payload with parameters
+payload = {'key1': 'value1', 'key2': 'value2'}
 
-# Make a POST request to the Flask endpoint
-response = requests.post('http://127.0.0.1:5005/example_endpoint', json=data)
+# Making a GET request with parameters
+r = requests.get('https://httpbin.org/get', params=payload)
 
-# Print the response
-print(response.json())
+# Printing the URL to see the encoded parameters
+print(r.url)
+# Output: https://httpbin.org/get?key2=value2&key1=value1
