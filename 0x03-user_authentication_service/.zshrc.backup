@@ -1,0 +1,92 @@
+# Set up the prompt
+
+autoload -Uz promptinit
+promptinit
+prompt adam1
+
+setopt histignorealldups sharehistory
+
+# Use emacs keybindings even if our EDITOR is set to vi
+bindkey -e
+
+# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
+HISTSIZE=1000
+SAVEHIST=1000
+HISTFILE=~/.zsh_history
+
+# Use modern completion system
+autoload -Uz compinit
+compinit
+
+zstyle ':completion:*' auto-description 'specify: %d'
+zstyle ':completion:*' completer _expand _complete _correct _approximate
+zstyle ':completion:*' format 'Completing %d'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' menu select=2
+eval "$(dircolors -b)"
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
+zstyle ':completion:*' menu select=long
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle ':completion:*' use-compctl false
+zstyle ':completion:*' verbose true
+
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+# Custom push function
+function push() {
+	if [ -z "$1" ]; then
+		git add . && git commit -m "$(date)" && git push
+	else
+		 git add . && git commit -m "$1" && git push
+	fi
+}
+# python path 
+export PYTHONPATH=$PYTHONPATH:$(pwd)/..
+# ALX  back end servers ssh connection
+SSH() {
+    case $1 in
+        -hs1 | -s1)
+            ssh ubuntu@100.27.4.38  # Replace with the actual IP for web-01
+            ;;
+        -hs2 | -s2)
+            ssh ubuntu@18.204.14.176  # Replace with the actual IP for web-02
+            ;;
+        -ps3 | -s3)
+            ssh ubuntu@18.206.207.117  # Replace with the actual IP for web-01 (proxy server)
+            ;;
+        -IP)
+            if [ -z "$2" ] || [ -z "$4" ]; then
+                echo "Usage: SSH -IP <IP Address> -u <user-name>"
+                return 1
+            fi
+            ssh "$4"@"$2"
+            ;;
+        *)
+            echo "Usage: SSH <options>"
+            echo "Options:"
+            echo "  -hs1, -s1   Connect to web-01"
+            echo "  -hs2, -s2   Connect to web-02"
+            echo "  -ps3, -s3   Connect to proxy server"
+            echo "  -IP         Connect to a server by specifying IP and user name"
+            ;;
+    esac
+}
+#comon  path 
+cpath="/mnt/c/Users/Active/" 
+temp="C:\\Users\\Active\\AppData\\Roaming"
+
+# Function to set virtual environment prompt
+function set_virtualenv_prompt {
+    if [[ -n "$VIRTUAL_ENV" ]]; then
+        VENV=$(basename "$VIRTUAL_ENV")
+        PROMPT="($VENV) $PROMPT"
+        echo "Virtual environment is activated: $VENV"
+    fi
+}
+
+# Source virtual environment activation script and update prompt
+source /mnt/c/Users/Active/Desktop/Coding/Short_Specializations/alx-backend-user-data/Flask-Auth/bin/activate
+set_virtualenv_prompt

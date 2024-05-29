@@ -27,16 +27,25 @@ class LocalStorage:
         # print(f"session fom save f{self.__session}")
 
 
-
     def caching(self):
-        cached = {}
-        with open(self.file_path, 'r') as F:
-            cached= json.load(F)
-        if cached:
-            for key in cached:
-                self.__session[key] = cached[key]
-        # print(f"cached data {cached}")
-        # print(f"cached data from session  {self.__session}")
+        """ Load data from file with try/except to handle the case where the file is empty or does not exist """
+        try:
+            cached = {}
+            with open(self.file_path, 'r') as F:
+                cached = json.load(F)
+            if cached:
+                for key in cached:
+                    self.__session[key] = cached[key]
+            # print(f"cached data {cached}")
+            # print(f"cached data from session  {self.__session}")
+        except (json.JSONDecodeError, FileNotFoundError):
+            # Handle the error appropriately
+            print("Error: The file is empty, contains invalid JSON, or does not exist. Initializing with an empty dictionary.")
+            cached = {}
+            # Optionally, you can initialize the file with an empty dictionary
+            with open(self.file_path, 'w') as F:
+                json.dump(cached, F)
+
 
 
     def commit(self):
