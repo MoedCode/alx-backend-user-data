@@ -42,20 +42,19 @@ class DB:
 
         return new_user
 
-    def find_user_by(self, **kwargs) -> User:
-        """Returns the first row found in the users table
+    def find_user_by(self, **kwargs):
+        """return first row in users if keyword matches
         """
         if not kwargs:
             raise InvalidRequestError
+        columns_list = User.__table__.columns.keys()
 
-        column_names = User.__table__.columns.keys()
         for key in kwargs.keys():
-            if key not in column_names:
+            if key not in columns_list:
                 raise InvalidRequestError
+        user = self.__session.query(User).filter_by(**kwargs).first()
 
-        user = self._session.query(User).filter_by(**kwargs).first()
-
-        if user is None:
+        if not user:
             raise NoResultFound
 
         return user
