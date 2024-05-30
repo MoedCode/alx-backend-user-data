@@ -44,6 +44,28 @@ class DB:
 
         return new_user
 
+    def add_user_1(self, *args):
+        """instantiate new user add it to database
+        """
+        user_obj = self.init_user(args)
+        if user_obj:
+            self.__session.add(user_obj)
+            self.commit()
+        return self.__session.query(User).filter_by(email=user_obj.email)
+
+    def commit(self):
+        self.__session.commit()
+
+    def init_user(*args):
+
+        if len(args) == 2:
+            return User(args[0], args[1])
+        if len(args) == 3:
+            return User(args[0], args[1], args[2])
+        if len(args) == 4:
+            return User(args[0], args[1], args[2], args[3])
+        return None
+
 
 if __name__ == "__main__":
     my_db = DB()
