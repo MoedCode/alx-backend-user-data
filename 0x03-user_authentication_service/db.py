@@ -42,12 +42,41 @@ class DB:
 
         return new_user
 
+    def find_user_by(self, **kwargs):
+        """ return first row in users if keyword matches
+        """
+        if not kwargs:
+            raise InvalidRequestError
+        columns_list = User.__table__.columns.keys()
+
+        for key in kwargs.keys():
+            if key not in columns_list:
+                raise InvalidRequestError
+        user = self.__session.query(User).filter_by(**kwargs).first()
+
+        if not user:
+            raise NoResultFound
+
+        return user
+
 
 if __name__ == "__main__":
     my_db = DB()
 
-    user_1 = my_db.add_user("test@test.com", "SuperHashedPwd")
-    print(user_1.id)
+    user = my_db.add_user("test@test.com", "PwdHashed")
+    print(user.id)
 
-    user_2 = my_db.add_user("test1@test.com", "SuperHashedPwd1")
-    print(user_2.id)
+    find_user = my_db.find_user_by(email="test@test.com")
+    print(find_user.id)
+
+    try:
+        find_user = my_db.find_user_by(email="test2@test.com")
+        print(find_user.id)
+    except NoResultFound:
+        print("Not found")
+
+    try:
+        find_user = my_db.find_user_by(no_email="test@test.com")
+        print(find_user.id)
+    except InvalidRequestError:
+        print("Invalid")
