@@ -56,6 +56,22 @@ class DB:
     def commit(self):
         self.__session.commit()
 
+    def update_user(self, user_id: int, **kwargs) -> None:
+        """method that takes as argument a required user_id
+        """
+        # point to same object in session
+        # so we edit the same object in place
+        user = self.find_user_by(id=user_id)
+        columns_list = User.__table__.columns.keys()
+
+        for key in kwargs.keys():
+            if key not in columns_list:
+                raise InvalidRequestError
+        for key, value in kwargs.items():
+            setattr(user, key, value)
+        # then we commit the session
+        self.__session.commit()
+
     def init_user(*args):
 
         if len(args) == 2:
