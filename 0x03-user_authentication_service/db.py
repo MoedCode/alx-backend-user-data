@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """DB module
 """
 from sqlalchemy import create_engine
@@ -8,11 +8,6 @@ from sqlalchemy.orm.session import Session
 from sqlalchemy.exc import InvalidRequestError
 from sqlalchemy.orm.exc import NoResultFound
 from user import (Base, User)
-
-# GLOBALS
-# engine = create_engine('postgresql://user:password@localhost/mydatabase')
-# SessionLocal = sessionmaker(bind=engine)
-# session = SessionLocal()
 
 
 class DB:
