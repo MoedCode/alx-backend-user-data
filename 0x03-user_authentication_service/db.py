@@ -1,17 +1,14 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """DB module
 """
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.exc import InvalidRequestError
+from sqlalchemy.orm.exc import NoResultFound
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.session import Session
-
-from user import (Base, User)
-
-# GLOBALS
-# engine = create_engine('postgresql://user:password@localhost/mydatabase')
-# SessionLocal = sessionmaker(bind=engine)
-# session = SessionLocal()
+from user import User
+from user import Base
 
 
 class DB:
@@ -36,7 +33,7 @@ class DB:
         return self.__session
 
     def add_user(self, email: str, hashed_password: str) -> User:
-        """instantiate new user add it to database
+        """Add a new user to the database
         """
         new_user = User(email=email, hashed_password=hashed_password)
         self._session.add(new_user)
@@ -44,12 +41,37 @@ class DB:
 
         return new_user
 
+    def find_user_by(self, **kwargs) -> User:
+        """Returns the first row found in the users table
+        """
+        if not kwargs:
+            raise InvalidRequestError
 
-if __name__ == "__main__":
-    my_db = DB()
+        column_names = User.__table__.columns.keys()
+        for key in kwargs.keys():
+            if key not in column_names:
+                raise InvalidRequestError
 
-    user_1 = my_db.add_user("test@test.com", "SuperHashedPwd")
-    print(user_1.id)
+        user = self._session.query(User).filter_by(**kwargs).first()
 
-    user_2 = my_db.add_user("test1@test.com", "SuperHashedPwd1")
-    print(user_2.id)
+        if user is None:
+            raise NoResultFound
+
+        return user
+
+    def update_user(self, user_id: int, **kwargs) -> None:
+        """
+        Update users attributes
+        Returns: None
+        """
+        user = self.find_user_by(id=user_id)
+
+        column_names = User.__table__.columns.keys()
+        for key in kwargs.keys():
+            if key not in column_names:
+                raise ValueError
+
+        for key, value in kwargs.items():
+            setattr(user, key, value)
+
+        self._session.commit()
