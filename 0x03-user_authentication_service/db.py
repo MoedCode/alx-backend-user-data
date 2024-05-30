@@ -59,24 +59,37 @@ class DB:
 
         return user
 
+    def update_user(self, user_id: int, **kwargs) -> None:
+        """method that takes as argument a required user_id
+        """
+        # point to same object in session
+        # so we edit the same object in place
+        user = self.find_user_by(id=user_id)
+        columns_list = User.__table__.columns.keys()
+
+        for key in kwargs.keys():
+            if key not in columns_list:
+                raise InvalidRequestError
+        for key, value in kwargs.items():
+            setattr(user, key, value)
+        # then we commit the session
+        self.__session.commit()
+
 
 if __name__ == "__main__":
     my_db = DB()
 
-    user = my_db.add_user("test@test.com", "PwdHashed")
+    my_db = DB()
+
+    email = 'test@test.com'
+    hashed_password = "hashedPwd"
+
+    user = my_db.add_user(email, hashed_password)
     print(user.id)
 
-    find_user = my_db.find_user_by(email="test@test.com")
-    print(find_user.id)
-
     try:
-        find_user = my_db.find_user_by(email="test2@test.com")
-        print(find_user.id)
-    except NoResultFound:
-        print("Not found")
+        my_db.update_user(user.id, hashed_password='NewPwd')
+        print("Password updated")
+    except ValueError:
+        print("Error")
 
-    try:
-        find_user = my_db.find_user_by(no_email="test@test.com")
-        print(find_user.id)
-    except InvalidRequestError:
-        print("Invalid")
