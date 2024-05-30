@@ -43,7 +43,7 @@ class DB:
         return new_user
 
     def find_user_by(self, **kwargs):
-        """return first row in users if keyword matches
+        """Return first row in users if keyword matches
         """
         if not kwargs:
             raise InvalidRequestError
