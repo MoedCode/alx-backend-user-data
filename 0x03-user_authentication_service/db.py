@@ -35,25 +35,27 @@ class DB:
         """instantiate new user add it to database
         """
         new_user = User(email=email, hashed_password=hashed_password)
-
+        # print(f"user after instantiation  {new_user.__dict__}")
         self._session.add(new_user)
         self._session.commit()
+        # print(f"user before return  {new_user.__dict__}")
 
         return new_user
 
-    def find_user_by(self, **kwargs):
-        """ return first row in users if keyword matches
+    def find_user_by(self, **kwargs) -> User:
+        """Returns the first row found in the users table
         """
         if not kwargs:
             raise InvalidRequestError
-        columns_list = User.__table__.columns.keys()
 
+        column_names = User.__table__.columns.keys()
         for key in kwargs.keys():
-            if key not in columns_list:
+            if key not in column_names:
                 raise InvalidRequestError
-        user = self.__session.query(User).filter_by(**kwargs).first()
 
-        if not user:
+        user = self._session.query(User).filter_by(**kwargs).first()
+
+        if user is None:
             raise NoResultFound
 
         return user
