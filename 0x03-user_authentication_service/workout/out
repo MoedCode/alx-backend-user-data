@@ -1,0 +1,46 @@
+"""
+Python 3.8.10 (default, Nov 22 2023, 10:22:35)
+[GCC 9.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from user import User
+>>> x = User("test@test.com", "SuperHashedPwd")
+>>> x
+<user.User object at 0x7f49e1f0e7f0>
+>>> valtab = ("test@test.com", "SuperHashedPwd")
+>>> y  = User(valtab)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: __init__() missing 1 required positional argument: 'hashed_password'
+>>> y  = User(**valtab)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: DeclarativeMeta object argument after ** must be a mapping, not tuple
+>>> y  = User(idx  for idx in valtab)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: __init__() missing 1 required positional argument: 'hashed_password'
+>>> y_ = {idx  for idx in valtab}
+>>> y_
+{'test@test.com', 'SuperHashedPwd'}
+>>> **y_
+  File "<stdin>", line 1
+    **y_
+    ^
+SyntaxError: invalid syntax
+>>> (**y_)
+  File "<stdin>", line 1
+    (**y_)
+     ^
+SyntaxError: invalid syntax
+>>> (**y_)
+  File "<stdin>", line 1
+    (**y_)
+     ^
+SyntaxError: invalid syntax
+>>> y  = User(**y_)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: DeclarativeMeta object argument after ** must be a mapping, not set
+>>>
+
+"""
