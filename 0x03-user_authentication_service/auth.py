@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
-from bcrypt import (
-    hashpw, gensalt, checkpw
-)
+"""
+auth module
+"""
+from bcrypt import hashpw, gensalt, checkpw
+from db import DB
+from user import User
 from sqlalchemy.orm.exc import NoResultFound
 from uuid import uuid4
 from typing import Union
-from db import DB
-from user import User
 
 
-def _hash_password(password: str) -> str:
+def _hash_password(password: str) -> bytes:
     """
-    Returned bytes is a salted hash of the input password
+    Takes in a password string arguments and returns a salted, hashed password
     """
     return hashpw(password.encode(), gensalt())
 
