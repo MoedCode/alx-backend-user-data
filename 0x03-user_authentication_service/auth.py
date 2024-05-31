@@ -1,17 +1,9 @@
-#!/usr/bin/python3
-user after instantiation  {
-    '_sa_instance_state': < sqlalchemy.orm.state.InstanceState object at 0x7fd920969340 > ,
-    'email': 'test@test.com',
-    'hashed_password': 'SuperHashedPwd'}
+#!/usr/bin/env python3
+from bcrypt import *
 
-user before return {
-    '_sa_instance_state': < sqlalchemy.orm.state.InstanceState object at 0x7fd920969340 > }
 
-1
-user after instantiation  {
-    '_sa_instance_state': < sqlalchemy.orm.state.InstanceState object at 0x7fd9209432e0 > ,
-    'email': 'test1@test.com',
-    'hashed_password': 'SuperHashedPwd1'}
-
-user before return {
-    '_sa_instance_state': < sqlalchemy.orm.state.InstanceState object at 0x7fd9209432e0 > }
+def _hash_password(password: str) -> str:
+    """
+    Returned bytes is a salted hash of the input password
+    """
+    return hashpw(password.encode(), gensalt())
