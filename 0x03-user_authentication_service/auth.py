@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-from bcrypt import *
+from bcrypt import (
+    hashpw, gensalt, checkpw
+)
 from sqlalchemy.orm.exc import NoResultFound
 from uuid import uuid4
 from typing import Union
