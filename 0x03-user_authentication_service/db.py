@@ -42,6 +42,26 @@ class DB:
 
         return new_user
 
+    # def find_by(self, cls, filterby, Val, get_all:bool=True):
+    #     fltr_dict = {filterby:Val}
+    #     if get_all:
+    #         return self._session.query(cls).filter_by(**fltr_dict).all()
+    #     return self._session.query(cls).filter_by(**fltr_dict).first()
+
+    def find_by(self, cls:any, get_first:bool=True,  **kwargs) -> any:
+        """ return result for class instance tables row filtered by keyword arguments    """
+
+        if not kwargs or not cls:
+            raise  ValueError("clas name `cls` and keyword argument required")
+        cls_attr =  cls.__table__.columns.keys()
+        for key in kwargs:
+            if key not in cls_attr:
+                InvalidRequestError(f"{cls.__name__} have no attribute {key}")
+
+        if get_first == True:
+            return self._session.query(cls).filter_by(**kwargs).first()
+        return self._session.query(cls).filter_by(**kwargs).first()
+
     def find_user_by(self, **kwargs) -> User:
         """Return first row in users if keyword matches
         """
@@ -52,7 +72,7 @@ class DB:
         for key in kwargs.keys():
             if key not in columns_list:
                 raise InvalidRequestError
-        user = self.__session.query(User).filter_by(**kwargs).first()
+        user = self._session.query(User).filter_by(**kwargs).first()
 
         if user is None:
             raise NoResultFound
